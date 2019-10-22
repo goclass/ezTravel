@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget id="tw.edu.nfu.eZTravel" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<!-- versionCode is optional and Android only -->
+  <name>eZTravel</name>
+  <description>
+      An example for phonegap build APP from yflan@nfu.edu.tw.
+  </description>
+  <author href="https://www.nfu.edu.tw/zh/" email="yflan@nfu.edu.tw">
+      Yu-Feng Lan
+  </author>
+  <content src="index.html" />
+  <platform name="android">
+    <icon src="res/map.png" />
+    <icon src="res/android/map.png" density="ldpi" />
+    <icon src="res/android/map.png" density="mdpi" />
+    <icon src="res/android/map.png" density="hdpi" />
+    <icon src="res/android/map.png" density="xhdpi" />
+  </platform>
+</widget>

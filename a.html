@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script>
+    $(document).on('pageinit', function () {
+      
+      $('#hero_list li').click(function (e) 
+      {
+        var heroName = $(this).text();
+        $('#hero').text(heroName);
+        var heroNum = $(this).index() + 1;
+        $(".heroImg").hide();
+        $("#hero" + heroNum).fadeIn(250);
+      });
+      
+    });
+    
+  </script>
+</head>
+<body>
+  
+  <div is="page" id="home" data-role="page" style="background:-webkit-linear-gradient(#fff,#ff9)">
+    <div is="header" data-role="header" data-position="fixed" data-theme="b">
+      <h3>首頁</h3>
+    </div>
+    <div is="content" role="main" class="ui-content">
+      <ul is="listview" data-role="listview" data-inset="true" style="margin-top:0;">
+        <li is="list-divider" data-role="list-divider" style="text-align:center;font-size:20px; background:-webkit-linear-gradient(#66f,#33a); color:#fff;">超級英雄列表</li>
+      </ul>
+      <ul is="listview" data-role="listview" data-inset="true" id="hero_list" style="margin:0;">
+        <li is="listview-li">
+          <a href="#Content" data-transition="slide">鋼鐵人</a>
+        </li>
+        <li is="listview-li">
+          <a href="#Content" data-transition="slide">美國隊長</a>
+        </li>
+        <li is="listview-li">
+          <a href="#Content" data-transition="slide">蜘蛛人</a>
+        </li>
+        <li is="listview-li">
+          <a href="#Content" data-transition="slide">浩克</a>
+        </li>
+        <li is="listview-li">
+          <a href="#Content" data-transition="slide">雷神索爾</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Page: Content  -->
+  <div id="Content" data-role="page">
+    <div data-role="header" data-position="fixed" data-theme="b">
+      <h3>介紹</h3>
+      <a class="ui-btn ui-btn-left" href="#home" data-transition="slide" data-direction="reverse">返回</a>
+    </div>
+    <div class="ui-content">
+      <div id="hero" style="font-size:20px; font-weight:bold; width:100%; text-align:center;"></div>
+      <div class="heroImg" id="hero1" style="display:none;"><img src="https://lh5.googleusercontent.com/-7PGZEz43F6k/Uwr7ZwlHhXI/AAAAAAAA3KA/AoQ_94R_2mc/s000/hero01.jpg" style="width:100%;"></div>
+      <div class="heroImg" id="hero2" style="display:none;"><img src="https://lh3.googleusercontent.com/-287OGsdtwd0/Uwr7aw0NY-I/AAAAAAAA3Kc/DfWFNDE60fo/s000/hero02.jpg" style="width:100%;"></div>
+      <div class="heroImg" id="hero3" style="display:none;"><img src="https://lh6.googleusercontent.com/-c2uIrTYnOkI/Uwr7Z7Q8qsI/AAAAAAAA3KE/N3ywjhpQdMQ/s000/hero03.jpg" style="width:100%;"></div>
+      <div class="heroImg" id="hero4" style="display:none;"><img src="https://lh6.googleusercontent.com/-m1VT8zvDnoY/Uwr7aml1VfI/AAAAAAAA3KQ/OhWHx0a38Q4/s000/hero04.jpg" style="width:100%;"></div>
+      <div class="heroImg" id="hero5" style="display:none;"><img src="https://lh5.googleusercontent.com/-0Hrixq2DLx0/Uwr7ap2oGKI/AAAAAAAA3KY/t2qcBeUYjk8/s000/hero05.jpg" style="width:100%;"></div>
+    </div>
+  </div>
+  
+</body>
+</html>
